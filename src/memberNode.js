@@ -100,7 +100,8 @@ router.post("/member", upload.single("avatar"), (req, res) => {
       type: "danger",
       text: "",
       info: "",
-      file: ""
+      file: "",
+      errmsg:"",
     }
   };
   const body = req.body;
@@ -169,6 +170,7 @@ router.post("/member", upload.single("avatar"), (req, res) => {
         console.log(err);
         data.message.text = "E-mail重複使用";
         data.message.type = "danger";
+        data.message.errmsg = err;
         res.send(data);
       }
     });
