@@ -166,7 +166,7 @@ router.post("/member", upload.single("avatar"), (req, res) => {
         data.message.text = "註冊成功";
         res.send(data);
       } else {
-        // console.log(err);
+        console.log(err);
         data.message.text = "E-mail重複使用";
         data.message.type = "danger";
         res.send(data);
