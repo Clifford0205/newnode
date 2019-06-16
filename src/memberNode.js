@@ -111,7 +111,7 @@ router.post("/member", upload.single("avatar"), (req, res) => {
   let fname = uuidv4();
 
   if (req.file && req.file.originalname) {
-    let myUrl = "http://localhost:5000";
+    let myUrl = "http://18.139.60.49:5000";
     switch (req.file.mimetype) {
       case "image/png":
         ext = ".png";
@@ -225,7 +225,7 @@ router.put("/member/:id", upload.single("avatar"), (req, res) => {
   let fname = uuidv4();
 
   if (req.file && req.file.originalname) {
-    let myUrl = "http://localhost:5000";
+    let myUrl = "http://18.139.60.49:5000";
     switch (req.file.mimetype) {
       case "image/png":
         ext = ".png";
